@@ -5,10 +5,15 @@ import org.example.dto.Pago;
 import java.math.BigDecimal;
 
 public class PagoService {
-    private final Pago pago;
+    private Pago pago;
+    private final CuponService cuponService;
 
-    public PagoService(BigDecimal total) {
-        pago = new Pago(total);
+    public PagoService(CuponService cuponService, BigDecimal total) {
+        this.cuponService = cuponService;
+    }
+
+    public void cargarPago(BigDecimal total) {
+
     }
 
     public void aplicarCupon(String codigo) {
@@ -21,5 +26,9 @@ public class PagoService {
 
     public void finalizarPago() {
         
+    }
+
+    public Pago getPago() {
+        return pago;
     }
 }
