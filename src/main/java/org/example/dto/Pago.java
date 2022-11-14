@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 public class Pago {
     private BigDecimal total;
     private Cupon cupon;
+    private BigDecimal descuento;
     private BigDecimal totalFinal;
 
     public Pago(BigDecimal total) {
@@ -25,6 +26,14 @@ public class Pago {
 
     public void setCupon(Cupon cupon) {
         this.cupon = cupon;
+    }
+
+    public BigDecimal getDescuento() {
+        return descuento;
+    }
+
+    public void setDescuento(BigDecimal descuento) {
+        this.descuento = descuento;
     }
 
     public BigDecimal getTotalFinal() {
